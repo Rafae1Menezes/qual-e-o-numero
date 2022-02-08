@@ -76,6 +76,7 @@ export default class Game {
                 this.showNumberOnDisplay(404)
                 this.disableForm()
                 this.showNewGameButton()
+                return false
             })
     }
 
@@ -118,7 +119,6 @@ export default class Game {
             this.showMensage("Você acertou", "success")
             this.showNewGameButton()
             this.disableForm()
-            this.newGameButton.focus()
         }
         else if (this.secretNumber > this.guess.value) this.showMensage('É maior')
         else this.showMensage('É menor')
