@@ -1,0 +1,270 @@
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --gradient-background-page: linear-gradient(180deg, #EEEEEE 0%, #FFFFFF 100%);
+    --gradient-title: linear-gradient(180deg, #EF6C00 18.47%, #DB6300 36.57%);
+    --gradient-first-button: linear-gradient(180deg, #EF6C00 0%, #C0661C 100%);
+    --gradient-second-button: linear-gradient(180deg, #434854 0%, #9E9E9E 100%);
+
+    --first-color: #FF6600;
+    --second-color: #CFCFCF;
+    --led-color: #262A34;
+    --success-color: #32BF00;
+    --error-color: #CC3300;
+    --segment-color: #DDDDDD;
+
+    --body-font: Montserrat, sans-serif;
+
+    --title-font-size: 36px;
+    --divider-width: 255px;
+    --number-height: 135px;
+    --newGameButton-top: 31px;
+    --container-height: 60vh;
+}
+
+/*==================== Smartphone ====================*/
+@media screen and (max-width: 500px) {
+    :root {
+        --title-font-size: 24px;
+        --divider-width: 205px;
+        --number-height: 100px;
+        --newGameButton-top: 56px;
+        --container-height: calc(90vh - 100px);
+    }
+ }
+
+ /*==================== Teclado do Smartphone acionado ====================*/
+@media screen and (max-height: 747px){
+    :root {
+        --newGameButton-top: 10%;
+    }
+}
+
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ html {
+    font-size: var(--rem);
+ }
+
+body {
+    font-family: var(--body-font);
+    background: var(--gradient-background-page);
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border: 0;      
+    border-radius: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+button:hover{
+    filter: brightness(0.95);
+}
+
+button:active {
+    filter: brightness(0.75);
+}
+
+button img {
+    margin-right: 8px;
+    width: 12px;
+    height: 12px;
+}
+ 
+input[type="text"]{
+    color: #9E9E9E;
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    box-sizing: border-box;
+    border-radius: 4px; 
+    outline: 0; 
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 12px;
+    
+}
+
+input[type="text"]:focus{
+    background: #FFFFFF;
+    border: 1px solid #FF6600;
+    box-sizing: border-box;
+    border-radius: 4px;  
+    color: #222222  
+}
+
+input[type="text"]:disabled {
+    background: #F5F5F5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+/*==================== Container ====================*/
+.container{
+    max-width: 423px;
+    height: var(--container-height);
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin: 10px;
+}
+
+/*==================== Title ====================*/
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h1{    
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--title-font-size);
+    text-align: center;
+    letter-spacing: -1px;
+
+
+    background: var(--gradient-title);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title .divider{
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    background-color: #CFCFCF;
+    width: var(--divider-width);
+    height: 1px;    
+}
+
+/*==================== Display ====================*/
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display .mensage{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-align: center;
+    height: 18px;
+}
+
+.display .mensage.success{
+    color: var(--success-color);
+}
+
+.display .mensage.error{
+    color: var(--error-color);
+}
+
+.display .number{
+    margin-top: 31px;
+    height: var(--number-height);
+    display: flex;
+    gap: 12px;
+}
+
+.display  .number svg{
+    height: 100%;
+    width: 100%;
+}
+
+.display .number svg path{
+    fill: #DDDDDD;
+}
+
+.display .number svg path.active{
+    fill: var(--led-color);
+}
+
+.display .number.success svg path.active{
+    fill: var(--success-color);
+}
+
+.display .number.error svg path.active{
+    fill: var(--error-color);
+}
+
+
+.display .newGameButton{
+    margin-top: var(--newGameButton-top);
+    background: var(--gradient-second-button);
+    width: 130px;
+    height: 42px;
+    margin-bottom: 20px;
+}
+
+.display .newGameButton.hidden{
+    visibility: hidden;
+}
+
+
+/*==================== Form ====================*/
+.form{
+    display: flex;
+    gap: 11px;
+    max-width: 298px;
+    width: 100%;
+}
+
+.form .guessInput{
+    width: 100%;
+    height: 42px;
+}
+
+.form .sendButton.disabled,
+.form .sendButton.disabled:hover,
+.form .sendButton.disabled:active{
+    background: #DDDDDD;
+    color: white;
+    cursor:auto;
+    filter: brightness(1);
+}
+
+.form .sendButton{
+    background: var(--gradient-first-button);
+    width: 90px;
+    height: 42px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="src/css/vh.js"></script>
+    <link rel="stylesheet" href="src/css/style.css" >
+
+    <meta name="description" content="Jogo Qual é o número? Você digita um palpite e o jogo dirá se número secreto é maior ou menor que o seu palpite.">
+
+    <link rel="icon" type="image/x-icon" href="src/img/fav-icon.png">
+    <title>Qual é o Número</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>QUAL É O NÚMERO?</h1>
+            <div class="divider"></div>
+        </div>
+        
+        
+        <div class="display">
+            <div id="mensage" class="mensage"></div>            
+            <div class="number" id="number"></div> 
+            <button id="newGameButton" class="newGameButton btGray hidden">
+                <img src="src/img/refresh.svg" alt="recarregar">
+                NOVA PARTIDA
+            </button>
+        </div>
+
+        <div class="form">
+            <input id="guess" class="guessInput" placeholder="Digite o palpite"  pattern="[0-9]*" type="text" inputmode="numeric">
+            <button id="sendButton" class="sendButton btOrange">ENVIAR</button>
+        </div>
+    </div>
+    
+    <script src="src/js/index.js" type="module"></script>
+</body>
+</html>
