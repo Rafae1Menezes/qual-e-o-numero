@@ -8,5 +8,5 @@ O Programa gera o display de LEDs criando tags HTML de SVG "acendendo" os leds n
 
 Por exemplo: o LED superior só acende para os números 0, 2, 3, 5, 7, 8, 9
  
-O programa permite que o usuário começo um novo jogo acerta o número secreto, ou quando a requisição apresenta erro.
+O programa permite que o usuário começe um novo jogo quando acerta o número secreto ou quando a requisição apresenta erro.
 
