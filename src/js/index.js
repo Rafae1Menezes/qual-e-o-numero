@@ -2,7 +2,7 @@ import Game from './Game.js'
 
 const game = new Game({
     inicialNumber: 0,
-    range: { min: 1, max: 10 },
+    range: { min: 1, max: 300 },
     guessInput: document.getElementById('guess'),
     numberField: document.getElementById('number'),
     mensageField: document.getElementById('mensage'),
